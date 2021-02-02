@@ -2,7 +2,9 @@
  
 Usando o acelerômetro, capacitivo, MPU-9250 para estudo em frequência.
 
-Pelo Datasheet esse modelo de acelerômetro só funciona até 4 Khz de frequência de amostragem. Para chegar a 4 Khz de frequência de amostragem, é necessario desabilitar o filtro interno do dispositivo.
+Pelo Datasheet esse modelo de acelerômetro só funciona até 4 Khz de frequência de amostragem. Para chegar a 4 Khz de frequência de amostragem, é necessario desabilitar o filtro interno do sensor.
+
+Para realizar a aquizição de dados, esta sendo utilizado um microcontrolador ESP32 com uma interrupção interna de 4 Khz.
 
 O protocolo de comunicação utilizado nesse projeto é o I2C.
 
@@ -32,16 +34,27 @@ O acelerômetro presente no MPU, possui três eixos X, Y e Z. O MPU-9250 possui 
 ![EixosSensor](https://github.com/Arthurmgwork/Acelerometro-MPU-9250-4k-Sample-Freq/blob/main/dire%C3%A7%C3%A3o%20dos%20eixos%20do%20sensor.JPG)
 
 Especificações do acelerômetro no MPU-9250:
+
 • Tensão de alimentação 2,5 volts para o chip e 5 volts para o módulo;
+
 • Temperatura máxima: 85 ºC;
+
 • Temperatura mínima: -40 ºC;
+
 • Três eixos (X, Y e Z) com escalas programáveis de ±2g, ±4g, ±8g e ±16g;
+
 • Saída de 16 bits;
+
 • Corrente em operação normal: 450𝜇A;
+
 • Baixo consumo de energia: 8,4𝜇A a 0.98Hz, 19,8 𝜇A a 31,25Hz;
+
 • Modo de descanso: 8 𝜇A;
+
 • Tolerância a impacto de 10,000g;
+
 • Frequência máxima de comunicação com o protocolo I2C em todos os registradores: 400 kHz;
+
 
 
 
